@@ -1,0 +1,41 @@
+﻿  10.cpp
+  11.cpp
+  12.cpp
+  13.cpp
+  14.cpp
+  15.cpp
+  16.cpp
+  17.cpp
+  18.cpp
+  19.cpp
+  1.cpp
+  20.cpp
+  21.cpp
+  22.cpp
+  23.cpp
+  24.cpp
+  25.cpp
+  2.cpp
+  3.cpp
+  4.cpp
+  Compiling...
+  5.cpp
+  6.cpp
+  7.cpp
+  8.cpp
+  9.cpp
+  ChallengeSelector.cpp
+  DataInput.cpp
+  Point.cpp
+  Range.cpp
+  RangeByLength.cpp
+  Utilities.cpp
+  Input.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+  InputSelector.cpp
+  main.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 1095 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  AdventOfCode2024.vcxproj -> C:\Users\Tobbe\source\repos\AdventOfCode2024\x64\Release\AdventOfCode2024.exe
