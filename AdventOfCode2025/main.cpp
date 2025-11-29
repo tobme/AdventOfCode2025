@@ -36,32 +36,30 @@ int main()
 	if (day == "c")
 		day = std::to_string(intDay);
 
-	auto part = InputSelector::GetInputFromList({ "Part1", "Part2"});
+	auto input = fetchData(day, DataInputEnvironment::TEST_DATA);
+	auto input2 = fetchData(day, DataInputEnvironment::REAL_DATA);
 
-	auto dataSelection = InputSelector::GetInputFromList({ "Test Data", "Real Data" });
-
-	DataInputEnvironment env = dataSelection == "Test Data" ? DataInputEnvironment::TEST_DATA : DataInputEnvironment::REAL_DATA;
-
-	auto input = fetchData(day, env);
-
-	auto challengeSelector = std::make_unique<ChallengeSelector>(day, input);
-
-	std::string answer = "";
+	auto challengeSelectorTestData = std::make_unique<ChallengeSelector>(day, input);
+	auto challengeSelectorRealData = std::make_unique<ChallengeSelector>(day, input2);
 
 	std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
 
-	if (part == "Part1")
-	{
-		answer = challengeSelector->runChallengePart1();
-	}
-	else
-	{
-		answer = challengeSelector->runChallengePart2();
-	}
+	std::string answerTestDataPart1 = challengeSelectorTestData->runChallengePart1();
+	std::string answerRealDataPart1 = challengeSelectorRealData->runChallengePart1();
+
+	std::string answerTestDataPart2 = challengeSelectorTestData->runChallengePart2();
+	std::string answerRealDataPart2 = challengeSelectorRealData->runChallengePart2();
 
 	std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
 
-	std::cout << "Answer: " << answer << std::endl;
+	std::cout << "Answer Test Data Part 1: " << answerTestDataPart1 << std::endl;
+	std::cout << "Answer Real Data Part 1: " << answerRealDataPart1 << std::endl;
+
+	std::cout << std::endl;
+
+	std::cout << "Answer Test Data Part 2: " << answerTestDataPart2 << std::endl;
+	std::cout << "Answer Real Data Part 2: " << answerRealDataPart2 << std::endl;
+
 	std::cout << "Took Time = " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << " [ms]" << std::endl;
 
 	return 0;

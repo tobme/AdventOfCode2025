@@ -4,12 +4,12 @@ import os
 for x in range(1, 26):
     date = str(x)
     try:
-        os.mkdir("AdventOfCode2024/" + date)
+        os.mkdir("AdventOfCode2025/" + date)
     except FileExistsError:
         print(f"Directory '{date}' already exists.")
 
-    hFile = open("AdventOfCode2024/" + date + "/" + date + ".h", "w")
-    cppFile = open("AdventOfCode2024/" + date + "/" + date + ".cpp", "w")
+    hFile = open("AdventOfCode2025/" + date + "/" + date + ".h", "w")
+    cppFile = open("AdventOfCode2025/" + date + "/" + date + ".cpp", "w")
 
     hFile.writelines("#pragma once" + "\n\n")
 
@@ -31,7 +31,7 @@ for x in range(1, 26):
     cppFile.writelines("std::string Day" + date + '::runPart2()\n{\n\treturn "";\n}\n\n')
     cppFile.close()
 
-iChallangeFile = open('AdventOfCode2024/IChallenge.h', "w")
+iChallangeFile = open('AdventOfCode2025/IChallenge.h', "w")
 
 iChallangeFile.writelines("#pragma once\n\n")
 
@@ -41,7 +41,7 @@ iChallangeFile.writelines("class IChallenge\n{\npublic:\n\tIChallenge() = defaul
 
 iChallangeFile.close()
 
-challengeSelectorH = open('AdventOfCode2024/ChallengeSelector.h', "w")
+challengeSelectorH = open('AdventOfCode2025/ChallengeSelector.h', "w")
 
 challengeSelectorH.writelines("#pragma once\n\n")
 
@@ -54,7 +54,7 @@ challengeSelectorH.writelines("class ChallengeSelector\n{\npublic:\n\tChallengeS
 
 challengeSelectorH.close()
 
-challengeSelectorCpp = open('AdventOfCode2024/ChallengeSelector.cpp', "w")
+challengeSelectorCpp = open('AdventOfCode2025/ChallengeSelector.cpp', "w")
 
 challengeSelectorCpp.writelines('#include "ChallengeSelector.h"\n\n')
 challengeSelectorCpp.writelines("#include <iostream>\n#include <chrono>\n#include <memory>\n\n")
