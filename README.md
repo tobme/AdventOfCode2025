@@ -1,3 +1,3 @@
-# AdventOfCode2024
+# AdventOfCode2025
 
-Programming challenge [advent of code](https://adventofcode.com/) consisting of 25 days of problems.
+Programming challenge [advent of code](https://adventofcode.com/) consisting of 12 days of problems.

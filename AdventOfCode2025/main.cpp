@@ -47,6 +47,9 @@ int main()
 	std::string answerTestDataPart1 = challengeSelectorTestData->runChallengePart1();
 	std::string answerRealDataPart1 = challengeSelectorRealData->runChallengePart1();
 
+	input->resetStream();
+	input2->resetStream();
+
 	std::string answerTestDataPart2 = challengeSelectorTestData->runChallengePart2();
 	std::string answerRealDataPart2 = challengeSelectorRealData->runChallengePart2();
 
