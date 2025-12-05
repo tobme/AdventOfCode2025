@@ -47,23 +47,27 @@ int main()
 	std::string answerTestDataPart1 = challengeSelectorTestData->runChallengePart1();
 	std::string answerRealDataPart1 = challengeSelectorRealData->runChallengePart1();
 
+	std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+
 	input->resetStream();
 	input2->resetStream();
+
+	std::chrono::steady_clock::time_point begin2 = std::chrono::steady_clock::now();
 
 	std::string answerTestDataPart2 = challengeSelectorTestData->runChallengePart2();
 	std::string answerRealDataPart2 = challengeSelectorRealData->runChallengePart2();
 
-	std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+	std::chrono::steady_clock::time_point end2 = std::chrono::steady_clock::now();
 
 	std::cout << "Answer Test Data Part 1: " << answerTestDataPart1 << std::endl;
 	std::cout << "Answer Real Data Part 1: " << answerRealDataPart1 << std::endl;
 
-	std::cout << std::endl;
+	std::cout << "Took Time = " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << " [ms]" << std::endl;
 
 	std::cout << "Answer Test Data Part 2: " << answerTestDataPart2 << std::endl;
 	std::cout << "Answer Real Data Part 2: " << answerRealDataPart2 << std::endl;
 
-	std::cout << "Took Time = " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << " [ms]" << std::endl;
+	std::cout << "Took Time = " << std::chrono::duration_cast<std::chrono::milliseconds>(end2 - begin2).count() << " [ms]" << std::endl;
 
 	return 0;
 }
